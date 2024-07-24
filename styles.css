@@ -19,13 +19,24 @@ nav > a{
     border-left:2px solid white;
     padding: 10px;
 }
+
 .nav_cont{
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
+    margin-left: 5px;
 }
+#hm_btn{
+    margin-right: 15px;
+    padding: 10px;
+}
+#hm_btn:hover{
+    background-color: rgb(173, 83, 137);
+    border-radius: 10px;
+} 
 body{
     /*background-color: linear-gradient();*/
-    background: linear-gradient(to right, rgb(60, 16, 83),rgb(173, 83, 137) );
+    background: linear-gradient(to bottom, rgb(60, 16, 83),rgb(173, 83, 137) );
 }
 aside{
     width: 40%;
