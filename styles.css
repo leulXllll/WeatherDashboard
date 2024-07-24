@@ -4,43 +4,40 @@
 
 header{
     background-color: transparent;
-    border: 1px solid white;
-    border-top: none;
-    border-left: none;
-    color: white;
-    text-align: left;
-}
-nav{
+    border-bottom: 3px solid black;
     display: flex;
-    align-items: center;
-    justify-content: space-between
-}
-nav > a{
-    border-left:2px solid white;
+    justify-content: space-between;
     padding: 10px;
+}
+#search{
+    background-image: url('/WeatherDashboard/Images/search.png');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 10px;
+    border: transparent;
+    margin-top: 2px;
+}
+#search:is(:hover , :focus){
+
 }
 
-.nav_cont{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-left: 5px;
-}
-#hm_btn{
-    margin-right: 15px;
-    padding: 10px;
-}
-#hm_btn:hover{
-    background-color: rgb(173, 83, 137);
-    border-radius: 10px;
-} 
+
 body{
     /*background-color: linear-gradient();*/
-    background: linear-gradient(to bottom, rgb(60, 16, 83),rgb(173, 83, 137) );
+   
+    /* background: linear-gradient(to bottom, rgb(60, 16, 83),rgb(173, 83, 137) ); */
+    background-image: url('/WeatherDashboard/Images/weather2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    overflow: hidden;
 }
 aside{
     width: 40%;
     height: 83vh;
     background-color: white;
-    visibility: hidden;  
+    visibility: hidden;
+    background-color: rgb(173, 83, 137);  
 }
