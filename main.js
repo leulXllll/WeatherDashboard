@@ -3,9 +3,14 @@ hm_btn.addEventListener('click',()=>{
     let side = document.querySelector('aside')
     if(side.style.visibility == "visible"){
     side.style.visibility="hidden";
-    side.style.height= "83vh"
+    side.style.opacity= "0"
   }else{
     side.style.visibility="visible";
-    side.style.height = "83vh";
+    side.style.opacity = "1";
   }
+})
+
+document.addEventListener('DOMContentLoaded',()=>{
+      let current = new Date();
+      document.querySelector('h1').textContent = current
 })

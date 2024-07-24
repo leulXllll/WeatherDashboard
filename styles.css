@@ -8,6 +8,7 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    height: 55px;
 }
 #search{
     background-image: url('/WeatherDashboard/Images/search.png');
@@ -17,9 +18,13 @@ header{
     border-radius: 10px;
     border: transparent;
     margin-top: 2px;
+    width: 150px;
+    transition: width 1s ease-out;
+    padding: 7px;
+    height: 30px;
 }
 #search:is(:hover , :focus){
-
+    width: 200px;
 }
 
 
@@ -32,12 +37,80 @@ body{
     background-size: cover;
     background-position: center;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 aside{
+    display: inline-block;
+    position: absolute;
     width: 40%;
     height: 83vh;
-    background-color: white;
+    background-color: #0066b2;
     visibility: hidden;
-    background-color: rgb(173, 83, 137);  
+    opacity: 0;
+    transition: all 1s;
+}
+
+h1{
+    font-weight: 900;
+    text-align: center;
+    background-color:#0066b2;
+    color: white;
+}
+h2{
+    display: block;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+    width: 150px;
+    padding: 8px;
+    background-color: #002D62;
+    border-radius: 20px 0px ;
+}
+h3{
+    display: inline;
+    color: white;
+    padding: 8px;
+    background-color: #002D62;
+}
+.box-contanier{
+    display: block;
+    margin: auto;
+    height: 150px;
+    width: 300px;
+    background-color: #002D62;
+    border-radius: 10px;
+}
+.box-contanier:hover{
+    box-shadow: 2px 2px 2px 2px blue;
+    transform: scale(1.05);
+}
+.box-contanier2{
+    background-color: #002D62;
+    border-radius: 10px;
+    /* padding-right: 85px; */
+    
+}
+
+
+#humidity,#wind{
+    /* width: 130px;
+    height: 80px; */
+    border-right: 2px solid white;
+}
+.contanier{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-around;
+    padding-right: 20px;
+
+}
+#hum_val{
+    align-self: center;
+    font-size: large;
+}
+div > span{
+    display: inline-block;
+    position: relative;
+    bottom: 40px;
+    color: white;
 }
