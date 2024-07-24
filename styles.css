@@ -1,4 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+header{
+    background-color: transparent;
+    border: 1px solid white;
+    border-top: none;
+    border-left: none;
+    color: white;
+    text-align: left;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+nav > a{
+    border-left:2px solid white;
+    padding: 10px;
+}
+.nav_cont{
+    display: flex;
+    align-items: center;
+}
 body{
     /*background-color: linear-gradient();*/
     background: linear-gradient(to right, rgb(60, 16, 83),rgb(173, 83, 137) );
+}
+aside{
+    width: 40%;
+    height: 83vh;
+    background-color: white;
+    /* visibility: hidden;  */
 }
