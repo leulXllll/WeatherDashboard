@@ -48,6 +48,9 @@ body{
     height: 100vh;
     overflow: auto;
 }
+#img{
+    transition: all 1s ease-in;
+}
 aside{
     display: inline-block;
     position: absolute;

@@ -26,12 +26,47 @@ btn.addEventListener('click',()=>{
        
       if(input.value!==''){
         city.textContent = input.value.capitalize() 
-      }
+      
       getInfo(input.value)
       .then(data=>{
-        document.getElementById('cond_val').textContent=data.weather[0].description
-        console.log(data.weather[0].description)
+        let img = document.querySelector('#img')
+        let cond = data.weather[0].description
+        document.getElementById('cond_val').textContent= cond
+        switch(cond.toLowerCase()){
+          case 'broken clouds' :
+                img.src='/WeatherDashboard/Images/favicon/cloud.png';
+              break;
+          case 'light rain':
+                img.src = '/WeatherDashboard/Images/favicon/light-rain.png';
+                break;
+          case'heavy intensity rain':
+                img.src = '/WeatherDashboard/Images/favicon/heavy-rain.png'
+                break;      
+          case'clear sky':
+                img.src = '/WeatherDashboard/Images/favicon/sun.png'
+                break;     
+          case'overcast clouds':
+                img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+                break;     
+          case'haze':
+                img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+                break;
+          case'overcast clouds':
+                img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+                break;        
+          case 'few clouds' :
+                img.src='/WeatherDashboard/Images/favicon/clouds.png';
+                break;      
+          case 'moderate rain' :
+                  img.src='/WeatherDashboard/Images/favicon/light-rain.png';
+                  break;           
+           case 'mist' :
+                    img.src='/WeatherDashboard/Images/favicon/fog.png';
+                    break;  
+        }
+        console.log(data)
       }).catch(err=>alert(err))
+    }
 })
 
 const getInfo = async(city)=>{
