@@ -10,14 +10,15 @@ header{
     padding: 10px;
     height: 55px;
 }
+header > div{
+    position: relative;
+    bottom: 5px;
+}
 #search{
-    background-image: url('/WeatherDashboard/Images/search.png');
-    background-position: top left;
-    background-repeat: no-repeat;
-    background-position: right;
+    position: relative;
+    bottom: 8px;
     border-radius: 10px;
     border: transparent;
-    margin-top: 2px;
     width: 150px;
     transition: width 1s ease-out;
     padding: 7px;
@@ -27,7 +28,14 @@ header{
     width: 200px;
 }
 
-
+button{
+    position: relative;
+    top: 3.5px;
+    right: 3px;
+    height: 33px;
+    border-radius: 0px 5px 5px 0px;
+    border: no;
+}
 body{
     /*background-color: linear-gradient();*/
    

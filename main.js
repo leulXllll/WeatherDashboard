@@ -10,7 +10,3 @@ hm_btn.addEventListener('click',()=>{
   }
 })
 
-document.addEventListener('DOMContentLoaded',()=>{
-      let current = new Date();
-      document.querySelector('h1').textContent = current
-})
