@@ -23,6 +23,7 @@ header > div{
     transition: width 1s ease-out;
     padding: 7px;
     height: 30px;
+    text-align: center;
 }
 #search:is(:hover , :focus){
     width: 200px;
