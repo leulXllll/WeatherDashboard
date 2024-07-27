@@ -22,7 +22,7 @@ header span{
 }
 #search{
     position: relative;
-    bottom: 8px;
+    bottom: 2px;
     border-radius: 10px;
     border: transparent;
     width: 150px;
@@ -31,27 +31,34 @@ header span{
     height: 30px;
     text-align: center;
     /* left: 160px; */
-    right:-100px;
+    /* right:-100px; */
 }
 #search:is(:hover , :focus){
     width: 200px;
-    box-shadow: 2px 2px blue  ;
+    box-shadow: 2px 2px blue ;
+    /* transition: width 4s ease-in; */
 }
 
 button{
     position: relative;
-    top: 3.5px;
-    right: 3px;
+    top: 0.1px;
     height: 33px;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 50%;
+    bottom: 10px;
     border: none;
+    width: 40px;
+    height: 40px;
     background-color: #0066b2;
-    left: 160px;
+    left: 3px;
 }
-/* header > div{
-    margin: auto;
-     width: 40%; 
-} */
+header > div{
+    margin-top: 3px;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 body{
     /*background-color: linear-gradient();*/
    
@@ -131,10 +138,6 @@ h3{
     width: 300px;
     background-color: #002D62;
     border-radius: 10px;
-}
-.box-contanier:hover{
-    box-shadow: 2px 2px 2px 2px blue;
-    transform: scale(1.05);
 }
 .box-contanier2{
     background-color: #002D62;
