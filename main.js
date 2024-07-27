@@ -10,6 +10,13 @@
 //   }
 // })
 
+window.addEventListener('load',()=>{
+  getInfo('new york').then(data=>{
+     assignValue(data)
+  }).catch(err=>{
+    alert(err)
+  })
+})
 
 Object.defineProperty(String.prototype,'capitalize',{
     value:function(){
@@ -30,61 +37,14 @@ btn.addEventListener('click',()=>{
       
       getInfo(input.value)
       .then(data=>{
-         
-       let temp = data.main.temp 
-       let cond_val_no = document.getElementById('cond_val_no')
-        cond_val_no.textContent=temp + "°C";
-        
-       let wind = data.wind.speed
-       let wind_val = document.getElementById('wind_val')
-       wind_val.textContent = wind+"m/s"
-
-       let hum = data.main.humidity
-       let hum_val = document.getElementById('hum_val')
-       hum_val.textContent=hum + "%" 
-
-        let img = document.querySelector('#img')
-        let cond = data.weather[0].description.capitalize()
-        document.getElementById('cond_val').textContent= cond
-        switch(cond.toLowerCase()){
-          case 'broken clouds' :
-                 img.src='/WeatherDashboard/Images/favicon/cloud.png';
-              break;
-          case 'light rain':
-                img.src = '/WeatherDashboard/Images/favicon/light-rain.png';
-                break;
-          case'heavy intensity rain':
-                img.src = '/WeatherDashboard/Images/favicon/heavy-rain.png'
-                break;      
-          case'clear sky':
-                img.src = '/WeatherDashboard/Images/favicon/sun.png'
-                break;     
-          case'overcast clouds':
-                img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
-                break;     
-          case'haze':
-                img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
-                break;
-          case'overcast clouds':
-                img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
-                break;        
-          case 'few clouds' :
-                img.src='/WeatherDashboard/Images/favicon/clouds.png';
-                break;      
-          case 'moderate rain' :
-                  img.src='/WeatherDashboard/Images/favicon/light-rain.png';
-                  break;           
-           case 'mist' :
-                    img.src='/WeatherDashboard/Images/favicon/fog.png';
-                    break;  
-        }
-        console.log(data)
-      }).catch(err=>alert(err))
+         assignValue(data)
+      }).catch(err=>{
+        alert(err)
+      })
     }else{
-      alert("You need to insert a city ")
+      alert("You need to Insert a city")
     }
-})
-
+  })
 const getInfo = async(city)=>{
        
        let response = await
@@ -95,3 +55,54 @@ const getInfo = async(city)=>{
        let data = await response.json()
        return data
 }
+
+function assignValue(data){
+  let temp = data.main.temp 
+  let cond_val_no = document.getElementById('cond_val_no')
+   cond_val_no.textContent=temp + "°C";
+   
+  let wind = data.wind.speed
+  let wind_val = document.getElementById('wind_val')
+  wind_val.textContent = wind+"m/s"
+
+  let hum = data.main.humidity
+  let hum_val = document.getElementById('hum_val')
+  hum_val.textContent=hum + "%" 
+
+   let img = document.querySelector('#img')
+   let cond = data.weather[0].description.capitalize()
+   document.getElementById('cond_val').textContent= cond
+   switch(cond.toLowerCase()){
+     case 'broken clouds' :
+            img.src='/WeatherDashboard/Images/favicon/cloud.png';
+         break;
+     case 'light rain':
+           img.src = '/WeatherDashboard/Images/favicon/light-rain.png';
+           break;
+     case'heavy intensity rain':
+           img.src = '/WeatherDashboard/Images/favicon/heavy-rain.png'
+           break;      
+     case'clear sky':
+           img.src = '/WeatherDashboard/Images/favicon/sun.png'
+           break;     
+     case'overcast clouds':
+           img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+           break;     
+     case'haze':
+           img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+           break;
+     case'overcast clouds':
+           img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+           break;        
+     case 'few clouds' :
+           img.src='/WeatherDashboard/Images/favicon/clouds.png';
+           break;      
+     case 'moderate rain' :
+             img.src='/WeatherDashboard/Images/favicon/light-rain.png';
+             break;           
+      case 'mist' :
+               img.src='/WeatherDashboard/Images/favicon/fog.png';
+               break;  
+   }
+}
+
