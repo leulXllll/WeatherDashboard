@@ -34,6 +34,14 @@ btn.addEventListener('click',()=>{
        let temp = data.main.temp 
        let cond_val_no = document.getElementById('cond_val_no')
         cond_val_no.textContent=temp + "°C";
+        
+       let wind = data.wind.speed
+       let wind_val = document.getElementById('wind_val')
+       wind_val.textContent = wind+"m/s"
+
+       let hum = data.main.humidity
+       let hum_val = document.getElementById('hum_val')
+       hum_val.textContent=hum + "%" 
 
         let img = document.querySelector('#img')
         let cond = data.weather[0].description.capitalize()
@@ -72,6 +80,8 @@ btn.addEventListener('click',()=>{
         }
         console.log(data)
       }).catch(err=>alert(err))
+    }else{
+      alert("You need to insert a city ")
     }
 })
 

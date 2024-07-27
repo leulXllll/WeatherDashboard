@@ -120,16 +120,23 @@ h2{
     color: white;
     margin: auto;
     margin-top: 10px;
-    width: 150px;
+    width: 200px;
     padding: 8px;
     background-color: #002D62;
-    border-radius: 20px 0px ;
+    border-radius: 30px 0px ;
+    border: 1px groove #0066b2;
+    font-family: Arizonia ,cursive;
+    font-weight: 300;
+    font-size: 25px;
+
 }
 h3{
     display: inline;
     color: white;
     padding: 8px;
     background-color: #002D62;
+    border-radius: 2px 0px ;
+    border: 1px groove #0066b2;
 }
 .box-contanier{
     display: block;
@@ -142,16 +149,22 @@ h3{
 .box-contanier2{
     background-color: #002D62;
     border-radius: 10px;
-    /* padding-right: 85px; */
-    
+    width: 220px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 
 #humidity,#wind{
-    /* width: 130px;
-    height: 80px; */
-    border-right: 2px solid white;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    /* border-right: 2px solid white; */
+    
 }
+
 .contanier{
     display: flex;
     margin-top: 10px;
@@ -159,9 +172,15 @@ h3{
     padding-right: 20px;
 
 }
-#hum_val{
+#hum_val,#wind_val{
     align-self: center;
     font-size: large;
+    position: relative;
+    top: 3px;
+    padding: 10px;
+    background-color: #0066b2;
+    border-radius: 7px;
+
 }
 div > span{
     display: inline-block;
