@@ -22,16 +22,6 @@ const btn = document.querySelector('button')
 let city = document.querySelector('h2')
 let input = document.getElementById('search')
 
-function changeOp(Img){
-  if(Img.style.opacity=="" || Img.style.opacity=="1"){
-    Img.style.opacity=="0"
-    console.log(Img.style.opacity)
-  }else if(Img.style.opacity=="0" ||Img.style.opacity=="" ){
-    Img.style.opacity=="1"
-    console.log(Img.style.opacity)
-    }
-
-}
 btn.addEventListener('click',()=>{
        
       if(input.value!==''){
@@ -44,12 +34,7 @@ btn.addEventListener('click',()=>{
         document.getElementById('cond_val').textContent= cond
         switch(cond.toLowerCase()){
           case 'broken clouds' :
-             img = document.querySelector('#img')
-             img.style.display = "none"
-             let newImg = document.createElement('img')
-             newImg.src= '/WeatherDashboard/Images/favicon/cloud.png'
-            
-                // img.src='/WeatherDashboard/Images/favicon/cloud.png';
+                 img.src='/WeatherDashboard/Images/favicon/cloud.png';
               break;
           case 'light rain':
                 img.src = '/WeatherDashboard/Images/favicon/light-rain.png';
@@ -61,10 +46,7 @@ btn.addEventListener('click',()=>{
                 img.src = '/WeatherDashboard/Images/favicon/sun.png'
                 break;     
           case'overcast clouds':
-                img = document.querySelector('#img')
-                changeOp(img)
                 img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
-                
                 break;     
           case'haze':
                 img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
