@@ -3,16 +3,22 @@
 }
 
 header{
-    background-color: transparent;
-    border-bottom: 3px solid black;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    height: 55px;
+           height: 160px;
+           width: 100%;
+           background-color:#002D62;
+           margin-bottom: 5px;
+           margin-top: 0px;    
+           border-radius: 8px;
 }
-header > div{
-    position: relative;
-    bottom: 5px;
+
+header span{
+    font-family: Arizonia,cursive;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    display: block;
+    margin: auto;
+    width: 30%;
 }
 #search{
     position: relative;
@@ -24,9 +30,12 @@ header > div{
     padding: 7px;
     height: 30px;
     text-align: center;
+    /* left: 160px; */
+    right:-100px;
 }
 #search:is(:hover , :focus){
     width: 200px;
+    box-shadow: 2px 2px blue  ;
 }
 
 button{
@@ -35,8 +44,14 @@ button{
     right: 3px;
     height: 33px;
     border-radius: 0px 5px 5px 0px;
-    border: no;
+    border: none;
+    background-color: #0066b2;
+    left: 160px;
 }
+/* header > div{
+    margin: auto;
+     width: 40%; 
+} */
 body{
     /*background-color: linear-gradient();*/
    
@@ -46,7 +61,8 @@ body{
     background-size: cover;
     background-position: center;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
+    width: 95%;
 }
 #img{
     opacity: 1;
