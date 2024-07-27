@@ -22,6 +22,7 @@ const btn = document.querySelector('button')
 let city = document.querySelector('h2')
 let input = document.getElementById('search')
 
+city.style.textAlign = "center"
 btn.addEventListener('click',()=>{
        
       if(input.value!==''){
@@ -29,8 +30,13 @@ btn.addEventListener('click',()=>{
       
       getInfo(input.value)
       .then(data=>{
+         
+       let temp = data.main.temp 
+       let cond_val_no = document.getElementById('cond_val_no')
+        cond_val_no.textContent=temp + "°C";
+
         let img = document.querySelector('#img')
-        let cond = data.weather[0].description
+        let cond = data.weather[0].description.capitalize()
         document.getElementById('cond_val').textContent= cond
         switch(cond.toLowerCase()){
           case 'broken clouds' :
@@ -71,8 +77,8 @@ btn.addEventListener('click',()=>{
 
 const getInfo = async(city)=>{
        
-       let response = await 
-       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3f2a100688fcfa8ce09413243a717650`)
+       let response = await
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3f2a100688fcfa8ce09413243a717650&units=metric`)
        if(response.status!==200){
         throw new Error()
        }
