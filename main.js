@@ -73,36 +73,56 @@ function assignValue(data){
    let cond = data.weather[0].description.capitalize()
    document.getElementById('cond_val').textContent= cond
    switch(cond.toLowerCase()){
-     case 'broken clouds' :
-            img.src='/WeatherDashboard/Images/favicon/cloud.png';
-         break;
-     case 'light rain':
-           img.src = '/WeatherDashboard/Images/favicon/light-rain.png';
+    case 'broken clouds':
+      case 'scattered clouds': 
+      case 'few clouds':
+             img.src='/WeatherDashboard/Images/favicon/cloud.png';
+          break;
+      case 'snow':
+      case 'light snow':
+      case 'light shower sleet':
+             img.src ='/WeatherDashboard/Images/favicon/snow.png'
+          break;
+       case 'heavy snow': 
+       case 'heavy shower snow':
+       case 'sleet':
+           img.src = "/WeatherDashboard/Images/favicon/heavy-snow.png"
            break;
-     case'heavy intensity rain':
-           img.src = '/WeatherDashboard/Images/favicon/heavy-rain.png'
-           break;      
-     case'clear sky':
-           img.src = '/WeatherDashboard/Images/favicon/sun.png'
-           break;     
-     case'overcast clouds':
-           img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
-           break;     
-     case'haze':
-           img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
-           break;
-     case'overcast clouds':
-           img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
-           break;        
-     case 'few clouds' :
-           img.src='/WeatherDashboard/Images/favicon/clouds.png';
-           break;      
-     case 'moderate rain' :
-             img.src='/WeatherDashboard/Images/favicon/light-rain.png';
-             break;           
-      case 'mist' :
-               img.src='/WeatherDashboard/Images/favicon/fog.png';
-               break;  
-   }
+       case 'light shower sleet':  
+       case 'light rain and snow': 
+       case 'rain and snow':
+       case 'light shower snow':
+            img.src= "/WeatherDashboard/Images/favicon/rain-snow.png" 
+            break;
+      case 'light rain':
+            img.src = '/WeatherDashboard/Images/favicon/light-rain.png';
+            break;
+      case'heavy intensity rain':
+            img.src = '/WeatherDashboard/Images/favicon/heavy-rain.png'
+            break;      
+      case'clear sky':
+            img.src = '/WeatherDashboard/Images/favicon/sun.png'
+            break;     
+      case'haze':
+            img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+            break;
+      case'overcast clouds':
+            img.src = '/WeatherDashboard/Images/favicon/sun-cloud.png'
+            break;              
+      case 'moderate rain' :
+              img.src='/WeatherDashboard/Images/favicon/light-rain.png';
+              break;       
+       case 'smoke':
+              img.src='/WeatherDashboard/Images/favicon/dark-cloud.png';
+          break;
+       case 'tornado':
+             img.src = '/WeatherDashboard/Images/favicon/tornado.png'
+             break;         
+       case 'mist':
+       case 'fog':
+       case 'dust':
+                img.src='/WeatherDashboard/Images/favicon/fog.png';
+                break;  
+    }
 }
 
