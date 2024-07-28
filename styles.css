@@ -19,6 +19,8 @@ header span{
     display: block;
     margin: auto;
     width: 30%;
+    text-decoration:  white
+
 }
 #search{
     position: relative;
@@ -97,17 +99,7 @@ body{
     left: 160px;
     font-size: large;
 }
-aside{
-    display: inline-block;
-    position: absolute;
-    width: 40%;
-    height: 83vh;
-    background-color: #0066b2;
-    visibility: hidden;
-    opacity: 0;
-    transition: all 1s;
-    z-index: 1;
-}
+
 
 h1{
     font-weight: 900;
@@ -187,4 +179,45 @@ div > span{
     position: relative;
     bottom: 40px;
     color: white;
+}
+
+@media screen and (min-width: 768px){
+    body{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    header{
+        height: 95vh;
+       /* background-color: green; */
+        width: 40vw;
+        display: inline-grid;
+        grid-template-columns: repeat(100px,4);
+       }
+       header span{
+        color: black;
+        grid-area: 1 / 1/ span 2 / span 4 ;
+       }
+       header div{
+       grid-area: 3 / 2 / span 1 / span 2;
+       }
+       #search{
+       width: 200px;
+       }
+       
+      main{
+        color: black;
+        background-color:#0066b2;
+        align-self: center;
+        padding: 20px;
+        border-radius: 12px;
+      }
+      #cond_val_no:hover,#cond_val:hover
+      ,h2:hover,#wind_val:hover,#hum_val:hover,h3:hover{
+        color: black;
+      }
+      button:hover{
+          transform: scale(1.1);
+      }
+       
 }
