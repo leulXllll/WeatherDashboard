@@ -78,31 +78,18 @@ body{
     background-color: rgba(0,0,0,0.5);
 }
 #img{
-    opacity: 1;
-    transition: opacity 2s ease-in;
-    width: 145px;
-    height: 145px;
+    width: 135px;
+    height: 135px;
+    display: inline-block;
 }
 #cond_val_no{
-    display: inline-flex;
-    align-items: center;
-    height: 100px;
-    width: 100px;
-    position: relative;
-    text-align: center;
-    bottom: 75px;
-    left: 10px;
-    background-color: black;
+    color: white;
+    padding: 32px 20px ;
     font-size: 30px;
     border-radius: 10px;
     background-color:#0066b2;
 }
-#cond_val{
-    position: relative;
-    bottom: 70px;
-    left: 160px;
-    font-size: large;
-}
+
 
 
 h1{
@@ -135,10 +122,11 @@ h3{
     border: 1px groove #0066b2;
 }
 .box-contanier{
-    display: block;
+    display: flex;
     margin: auto;
+    justify-content: space-around;
     height: 150px;
-    width: 320px;
+    width: 350px;
     background-color: #002D62;
     border-radius: 10px;
 }
@@ -152,7 +140,16 @@ h3{
     justify-content: space-around;
 }
 
+.inner{
+    display: inline-flex;
+    width: 150px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
 
+
+}
 #humidity,#wind{
     width: 80px;
     height: 80px;
@@ -179,10 +176,10 @@ h3{
 
 }
 div > span{
-    display: inline-block;
+    /* display: inline-block;
     position: relative;
     bottom: 40px;
-    color: white;
+    color: white; */
 }
 
 @media screen and (min-width: 768px){
