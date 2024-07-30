@@ -29,24 +29,21 @@ header span{
     bottom: 2px;
     border-radius: 10px;
     border: transparent;
-    width: 150px;
+    width: 170px;
     transition: width 1s ease-out;
     padding: 7px;
     height: 30px;
     text-align: center;
-    background-color: transparent;
-    color: white;
-    outline: 1px solid white;
+    color: black;
+    outline: none
 }
 #search:is(:hover , :focus){
-    width: 200px;
-    box-shadow: 2px 2px blue ;
+    width: 220px;
+    
     outline: 1px solid var(blue);
     /* transition: width 4s ease-in; */
 }
-#search::placeholder{
-    color: white;
-}
+
 button{
     position: relative;
     top: 0.1px;
@@ -239,5 +236,13 @@ div > span{
           transform: scale(1.1);
           /* outline: none; */
       }
+      #search{
+        background-color: transparent;
+        color: white;
+        outline: 1px solid white;
+      }
+      #search::placeholder{
+        color: white;
+    }
        
 }
