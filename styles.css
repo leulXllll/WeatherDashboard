@@ -197,7 +197,7 @@ div > span{
     }
     header{
         height: 95vh;
-       /* background-color: green; */
+        background-color:var(--blue);
         width: 40vw;
         display: inline-grid;
         grid-template-columns: repeat(100px,4);
@@ -234,12 +234,16 @@ div > span{
       }
       button:hover{
           transform: scale(1.1);
-          /* outline: none; */
+          background-color: #002D62;
       }
       #search{
         background-color: transparent;
         color: white;
         outline: 1px solid white;
+        background-color: rgba(240,240,240,0.5);
+      }
+      #search:is(:hover,:focus){
+        color: black;
       }
       #search::placeholder{
         color: white;

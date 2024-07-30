@@ -18,6 +18,13 @@ const btn = document.querySelector('button')
 let city = document.querySelector('h2')
 let input = document.getElementById('search')
 
+input.addEventListener('keydown',(e)=>{
+      if(e.key=="Enter"){
+        e.preventDefault()
+        btn.click()
+      }
+})
+
 city.style.textAlign = "center"
 btn.addEventListener('click',()=>{
        
@@ -61,6 +68,7 @@ function assignValue(data){
    let img = document.querySelector('#img')
    let cond = data.weather[0].description.capitalize()
    document.getElementById('cond_val').textContent= cond
+   
    switch(cond.toLowerCase()){
     case 'broken clouds':
       case 'scattered clouds': 
