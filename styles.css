@@ -1,7 +1,9 @@
 *{
     box-sizing: border-box;
 }
-
+:root{
+    --blue: #0066b2;
+}
 header{
            height: 160px;
            width: 100%;
@@ -32,15 +34,19 @@ header span{
     padding: 7px;
     height: 30px;
     text-align: center;
-    /* left: 160px; */
-    /* right:-100px; */
+    background-color: transparent;
+    color: white;
+    outline: 1px solid white;
 }
 #search:is(:hover , :focus){
     width: 200px;
     box-shadow: 2px 2px blue ;
+    outline: 1px solid var(blue);
     /* transition: width 4s ease-in; */
 }
-
+#search::placeholder{
+    color: white;
+}
 button{
     position: relative;
     top: 0.1px;
