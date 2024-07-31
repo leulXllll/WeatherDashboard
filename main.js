@@ -98,6 +98,7 @@ function assignValue(data){
             img.src= "/WeatherDashboard/Images/favicon/rain-snow.png" 
             break;
       case 'light rain':
+      case 'light intensity drizzle':  
             path+='light-rain.png';
             img.src = path;
             break;
