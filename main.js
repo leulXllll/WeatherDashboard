@@ -58,35 +58,34 @@ let light_theme = true
 btn_toggle.addEventListener('click',()=>{
 
   let body = document.querySelector('body')
-      body.style.backgroundImage = "url('./Images/background2.jpg')";
-      let header = document.querySelector('header')
-      let box_cont = document.querySelector('.box-contanier')
-      let box_cont2 = document.querySelectorAll('.box-contanier2')
-      let h3 = document.querySelectorAll('h3')
-      let h2 = document.querySelector('h2')
-      console.log("light theme is ",light_theme)
-      let array = []
-      array.push(header,box_cont,h2)
-      if(light_theme){   
-           array.forEach(element => {
-            element.style.backgroundColor = "#0066b2"
-         });
+  let header = document.querySelector('header')
+  let box_cont = document.querySelector('.box-contanier')
+  let box_cont2 = document.querySelectorAll('.box-contanier2')
+  let h3 = document.querySelectorAll('h3')
+  let h2 = document.querySelector('h2')
+  let array = []
+  array.push(header,box_cont,h2)
+  if(light_theme){   
+    body.style.backgroundImage = "url('./Images/background2.jpg')";
+    array.forEach(element => {
+      element.style.backgroundColor = "#0066b2"
+    });
     for(let i=0;i<2;i++){
-        box_cont2[i].style.backgroundColor = "#0066b2"
-        h3[i].style.backgroundColor = "#0066b2"
-      }
-  
-        light_theme=false;
+      box_cont2[i].style.backgroundColor = "#0066b2"
+      h3[i].style.backgroundColor = "#0066b2"
+    }
+    
+    light_theme=false;
   }else {
-    alert("not gotten through")
-           array.forEach(element => {
-            element.style.backgroundColor = '#002D62';
-         });
+    array.forEach(element => {
+      element.style.backgroundColor = '#002D62';
+    });
     for(let i=0;i<2;i++){
-        box_cont2[i].style.backgroundColor = "#002D62"
-        h3[i].style.backgroundColor = "#002D62"
-      }
-      light_theme=true
+      box_cont2[i].style.backgroundColor = "#002D62"
+      h3[i].style.backgroundColor = "#002D62"
+    }
+    body.style.backgroundImage = "url('./Images/weather2.jpg')";
+    light_theme=true
   }
 })
 
