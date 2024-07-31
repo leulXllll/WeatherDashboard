@@ -14,7 +14,7 @@ Object.defineProperty(String.prototype,'capitalize',{
     enumerable:false
 })
 
-const btn = document.querySelector('button')
+const btn = document.querySelector('#srch_btn')
 let city = document.querySelector('h2')
 let input = document.getElementById('search')
 
@@ -52,6 +52,43 @@ const getInfo = async(city)=>{
        let data = await response.json()
        return data
 }
+
+const btn_toggle = document.getElementById('toggle_btn')
+let light_theme = true
+btn_toggle.addEventListener('click',()=>{
+
+  let body = document.querySelector('body')
+      body.style.backgroundImage = "url('./Images/background2.jpg')";
+      let header = document.querySelector('header')
+      let box_cont = document.querySelector('.box-contanier')
+      let box_cont2 = document.querySelectorAll('.box-contanier2')
+      let h3 = document.querySelectorAll('h3')
+      let h2 = document.querySelector('h2')
+      console.log("light theme is ",light_theme)
+      let array = []
+      array.push(header,box_cont,h2)
+      if(light_theme){   
+           array.forEach(element => {
+            element.style.backgroundColor = "#0066b2"
+         });
+    for(let i=0;i<2;i++){
+        box_cont2[i].style.backgroundColor = "#0066b2"
+        h3[i].style.backgroundColor = "#0066b2"
+      }
+  
+        light_theme=false;
+  }else {
+    alert("not gotten through")
+           array.forEach(element => {
+            element.style.backgroundColor = '#002D62';
+         });
+    for(let i=0;i<2;i++){
+        box_cont2[i].style.backgroundColor = "#002D62"
+        h3[i].style.backgroundColor = "#002D62"
+      }
+      light_theme=true
+  }
+})
 
 function assignValue(data){
   let temp = data.main.temp 
