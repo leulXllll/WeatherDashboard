@@ -11,18 +11,44 @@ header{
            margin-bottom: 5px;
            margin-top: 0px;    
            border-radius: 8px;
+           display: flex;
+           flex-direction: column; 
+           justify-content: space-between;
 }
 
+/* header span{
+    font-family: Arizonia,cursive;
+    font-size: 40px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    margin: auto;
+    width: 90%; 
+    text-decoration:  white;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+
+}
+span button{
+    align-self: flex-end;
+} */
 header span{
     font-family: Arizonia,cursive;
     font-size: 40px;
     color: white;
     font-weight: 600;
-    display: block;
+    display: flex;
     margin: auto;
-    width: 30%;
-    text-decoration:  white
+    width: 90%; 
+    text-decoration:  white;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
 
+}
+span button{
+    align-self: flex-end;
 }
 #search{
     position: relative;
@@ -194,7 +220,7 @@ div > span{
     }
     header{
         height: 95vh;
-        background-color:var(--blue);
+        background-color:#002D62;
         width: 40vw;
         display: inline-grid;
         grid-template-columns: repeat(100px,4);
