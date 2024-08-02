@@ -67,6 +67,7 @@ btn_toggle.addEventListener('click',()=>{
   array.push(header,box_cont,h2)
   if(light_theme){   
     body.style.backgroundImage = "url('./Images/background2.jpg')";
+    btn_toggle.style.backgroundColor = "#0066b2"
     array.forEach(element => {
       element.style.backgroundColor = "#0066b2"
     });
@@ -77,6 +78,7 @@ btn_toggle.addEventListener('click',()=>{
     
     light_theme=false;
   }else {
+    btn_toggle.style.backgroundColor = "#002D62"
     array.forEach(element => {
       element.style.backgroundColor = '#002D62';
     });
@@ -106,7 +108,7 @@ function assignValue(data){
    let cond = data.weather[0].description.capitalize()
    document.getElementById('cond_val').textContent= cond
    
-   let path= '/WeatherDashboard/Images/icons/';
+   let path= './Images/icons/';
 
    switch(cond.toLowerCase()){
     case 'broken clouds':
@@ -162,7 +164,11 @@ function assignValue(data){
        case 'tornado':
             path+='tornado.png'
              img.src = path;
-             break;         
+             break; 
+       case 'thunderstorm':
+             path+='thunder.png';
+             img.src = path;
+        break;              
        case 'mist':
        case 'fog':
        case 'dust':

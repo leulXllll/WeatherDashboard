@@ -15,24 +15,6 @@ header{
            flex-direction: column; 
            justify-content: space-between;
 }
-
-/* header span{
-    font-family: Arizonia,cursive;
-    font-size: 40px;
-    color: white;
-    font-weight: 600;
-    display: flex;
-    margin: auto;
-    width: 90%; 
-    text-decoration:  white;
-    flex-direction: column;
-    background-color: transparent;
-    align-items: center;
-
-}
-span button{
-    align-self: flex-end;
-} */
 header span{
     font-family: Arizonia,cursive;
     font-size: 40px;
@@ -94,7 +76,7 @@ body{
     /*background-color: linear-gradient();*/
    
     /* background: linear-gradient(to bottom, rgb(60, 16, 83),rgb(173, 83, 137) ); */
-    background-image: url('/WeatherDashboard/Images/weather2.jpg');
+    background-image: url('./Images/weather2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -201,12 +183,7 @@ h3{
     border-radius: 7px;
 
 }
-div > span{
-    /* display: inline-block;
-    position: relative;
-    bottom: 40px;
-    color: white; */
-}
+
 
 @media screen and (min-width: 768px){
     *{
@@ -214,6 +191,7 @@ div > span{
     
     }
     body{
+        position: relative;
         display: flex;
         width: 100%;
         justify-content: space-around;
@@ -235,7 +213,11 @@ div > span{
        #search{
        width: 200px;
        }
-       
+       #toggle_btn{
+        position: absolute;
+        right: 30px;   
+        bottom: 553px;   
+       }
       main{
         position: relative;
         width: 40vw;
